@@ -6,15 +6,12 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.stereotype.Component;
 import rx.Observable;
 
-import javax.validation.constraints.NotNull;
-
 @Component
 public class WikipediaClient extends AsyncRestClient {
 
     private static final String URL = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts" +
             "&exintro=true&redirects=true&titles={title}";
 
-    @NotNull
     @HystrixCommand(
             fallbackMethod = "fallback",
             commandKey = "wikipediaCommand",

@@ -7,7 +7,6 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.stereotype.Component;
 import rx.Observable;
 
-import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 @Component
@@ -15,7 +14,6 @@ public class MusicBrainzClient extends AsyncRestClient {
 
     private static final String URL = "http://musicbrainz.org/ws/2/artist/{mbId}?&fmt=json&inc=url-rels+release-groups";
 
-    @NotNull
     @HystrixCommand(
             fallbackMethod = "fallback",
             commandKey = "musicBrainzCommand",

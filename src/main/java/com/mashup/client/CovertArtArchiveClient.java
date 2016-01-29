@@ -6,14 +6,11 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.stereotype.Component;
 import rx.Observable;
 
-import javax.validation.constraints.NotNull;
-
 @Component
 public class CovertArtArchiveClient extends AsyncRestClient {
 
     private static final String URL = "http://coverartarchive.org/release-group/{mbId}";
 
-    @NotNull
     @HystrixCommand(
             fallbackMethod = "fallback",
             commandKey = "covertArtArchiveCommand",
