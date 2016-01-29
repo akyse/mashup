@@ -6,8 +6,15 @@
 
 ## Commands
 
-- Build with test 
-mvn clean install 
+### Build executable jar 
+`mvn clean install`
 
-- Start app
+### Start app
+`
 mvn spring-boot:run
+`
+
+### Run tests
+`
+mvn clean test
+`
