@@ -1,20 +1,23 @@
 # mashup
 
-## Prerequisites ##
+### Prerequisites ##
 - Java 8
-- Gradle
+- Maven
 
-## Commands
+### Commands
 
-### Build executable jar 
-`mvn clean install`
+#### Build executable jar 
+```sh
+$ mvn clean install
+```
 
-### Start app
-`
-mvn spring-boot:run
-`
+#### Start embed app
+```sh
+$ mvn spring-boot:run
+```
 
-### Run tests
-`
-mvn clean test
-`
+### App URLs
+[Swagger UI](http://localhost:8080/swagger-ui.html)
+
+[Hystrix Dashboard](http://localhost:8080/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A8080%2Fhystrix.stream)
+
