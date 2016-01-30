@@ -4,25 +4,20 @@
 - Java 8
 - Maven
 
-### URLs
-#### Swagger UI
-swagger-ui.html
-#### Hystrix Dashboard
-/hystrix
-
 ### Commands
 
 #### Build executable jar 
 ```sh
-mvn clean install
+$ mvn clean install
 ```
 
-#### Start app
+#### Start embed app
 ```sh
-mvn spring-boot:run
+$ mvn spring-boot:run
 ```
 
-#### Run tests
-```sh
-mvn clean test
-```
+### App URLs
+[Swagger UI](http://localhost:8080/swagger-ui.html)
+
+[Hystrix Dashboard](http://localhost:8080/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A8080%2Fhystrix.stream)
+
