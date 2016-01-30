@@ -2,7 +2,7 @@
 
 ### Prerequisites ##
 - Java 8
-- Gradle
+- Maven
 
 ### URLs
 #### Swagger UI
@@ -13,14 +13,16 @@ swagger-ui.html
 ### Commands
 
 #### Build executable jar 
-`mvn clean install`
+```sh
+mvn clean install
+```
 
 #### Start app
-`
+```sh
 mvn spring-boot:run
-`
+```
 
 #### Run tests
-`
+```sh
 mvn clean test
-`
+```
