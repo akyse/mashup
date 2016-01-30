@@ -7,8 +7,6 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.stereotype.Component;
 import rx.Observable;
 
-import java.util.UUID;
-
 @Component
 public class MusicBrainzClient extends AsyncRestClient {
 
@@ -29,7 +27,7 @@ public class MusicBrainzClient extends AsyncRestClient {
         return super.observe(URL, ArtistDTO.class, mbId.toString());
     }
 
-    private ArtistDTO fallback(final UUID mbId) {
+    private ArtistDTO fallback(final MbId mbId) {
         return super.fallback(URL, ArtistDTO.class, mbId.toString());
     }
 }

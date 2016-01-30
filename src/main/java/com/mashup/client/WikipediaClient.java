@@ -27,7 +27,7 @@ public class WikipediaClient extends AsyncRestClient {
         return super.observe(URL, MetaDataDTO.class, title);
     }
 
-    private MetaDataDTO fallback(final String mbId) {
-        return super.fallback(URL, MetaDataDTO.class, mbId);
+    private MetaDataDTO fallback(final String title) {
+        return super.fallback(URL, MetaDataDTO.class, title);
     }
 }
