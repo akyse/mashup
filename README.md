@@ -16,6 +16,11 @@ $ mvn clean install
 $ mvn spring-boot:run
 ```
 
+### Load test
+```sh
+$ siege -c 20 -f siege_urls
+```
+
 ### App URLs
 [Swagger UI](http://localhost:8080/swagger-ui.html)
 
